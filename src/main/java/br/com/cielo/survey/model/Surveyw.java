@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class Survey {
+public class Surveyw {
 	
 	private BigInteger id;
 	private String details;
