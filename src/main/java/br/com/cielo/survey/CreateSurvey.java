@@ -19,7 +19,7 @@ public class CreateSurvey implements RequestHandler<SurveyEntity, SurveyEntity>{
 
 	
 	Gson gson = new GsonBuilder().setPrettyPrinting().create();
-	private String password = "y8JK3!#lzM9*wzEwEWMnds=";
+	public String password = "y8JK3!#lzM9*wzEwEWMnds=";
 	
 	  @Override
 	  public SurveyEntity handleRequest(SurveyEntity survey, Context context)
@@ -33,6 +33,8 @@ public class CreateSurvey implements RequestHandler<SurveyEntity, SurveyEntity>{
 		    mapper.save(survey);
 		    
 		    logger.log("EVENT: " + gson.toJson(survey));
+		  
+		    logger.log("Password: " + password);
 		    
 		    return survey;
 	  }
